@@ -8,7 +8,7 @@ const StartedBaking = () => {
     <div className='w-full overflow-hidden'>
 
       {/* main section for how we started baking  */}
-      <div className='min-h-screen relative flex flex-col sm:flex-row justify-between px-4 sm:px-10 py-10'>
+      <div className='min-h-screen relative flex flex-col sm:flex-row justify-between sm:px-0 py-0'>
 
         {/* background color div */}
         <div className='bg-[#fbf6eb] absolute w-full h-9/10 z-0 bottom-0 '></div>
