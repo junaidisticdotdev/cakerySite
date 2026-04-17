@@ -3,14 +3,17 @@ import React from 'react'
 
 const OurCategories = () => {
   return (
-    <div>
+    <div className='W-full py-16 md:py-20 overflow-hidden bg-white'>
+
       {/* Our categories */}
-      <div className='flex flex-col items-center justify-center min-h-screen w-full overflow-hidden '>
+      <div className='max-w-[1400px] mx-auto px-6 flex flex-col items-center justify-center'>
+
         <p className='italic font-medium text-[40px] md:text-[60px] lg:text-[70px] px-4 md:px-0'>Our Categories</p>
 
-<div className='flex flex-col md:flex-row'>
+{/* grids for cards in our categories  */}
+<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full justify-center items-center'>
   {/* at md two cards shown */}
-  <div className='flex flex-col sm:flex-row'>
+  
         <OurCategoryCard
         image="/Media/cupcake-home.webp"
         title="CUPCAKES"
@@ -19,9 +22,8 @@ const OurCategories = () => {
         <OurCategoryCard
         image="/Media/brownie-home.webp"
         title="BROWNIES"
-        count={64}/> </div>
+        count={64}/> 
 
-<div className='flex flex-col sm:flex-row'>
         <OurCategoryCard
         image="/Media/cheesecake-home.webp"
         title="CHEESECAKES"
@@ -30,11 +32,11 @@ const OurCategories = () => {
         <OurCategoryCard
         image="/Media/cake-home.webp"
         title="CAKES"
-        count={64}/> </div>
+        count={64}/>  </div>
 
 </div>
       </div>
-    </div>
+    
   )
 }
 
