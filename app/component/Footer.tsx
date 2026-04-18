@@ -8,7 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <div className='w-full h-20 bg-white flex items-center justify-between px-20'>
+      <div className='w-full h-auto py-10 bg-white flex flex-col sm:flex-row items-center justify-between px-20'>
 {/* logo image and copyright */}
         <div className='flex gap-4 items-center justify-center'>
 <img src="/Media/logo.webp" alt="" />

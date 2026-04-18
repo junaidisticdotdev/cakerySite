@@ -10,7 +10,7 @@ interface GalleryImageProps {
 const GalleryImage = ({ src, className = "" } : GalleryImageProps) => (
   <div
     className={`relative group overflow-hidden rounded-xl cursor-pointer ${className}`}
-  >
+  > 
     <img
       src={src}
       alt="Gallery Item"
@@ -22,6 +22,8 @@ const GalleryImage = ({ src, className = "" } : GalleryImageProps) => (
     </div>
   </div>
 );
+
+
 
 const Gallery = () => {
   return (
@@ -39,13 +41,17 @@ const Gallery = () => {
 
         {/* categories / responsive on mobile  */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 mt-4 overflow-x-auto pb-2">
+
                 <p className="italic transition duration-300 cursor-pointer text-[#f79dc3] text-[18px] md:text-[20px]">All</p>
-                {["occasion" , "Bakery item", "Cream type"].map((item) =>(
+
+                {["Occasion" , "Bakery item", "Cream type"].map((item) =>(
                         <p key={item} className="italic transition duration-300 hover:text-[#f79dc3] cursor-pointer text-[18px] md:text-[20px]">
                                 {item}
                         </p>
                 ))}
+               
         </div>
+
 </div>
 {/* gallery section in grids  */}
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full h-auto">
