@@ -13,17 +13,10 @@ const OurCategories = () => {
         </p>
 
         {/* grids for cards in our categories  */}
-        <motion.div
+        <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full justify-center items-center"
 
-          initial={{ y: 80, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{
-            duration: 1.2,
-            ease: "easeOut",
-            delay: 0.4,
-          }}
+         
         >
           {/* at md two cards shown */}
           <OurCategoryCard
@@ -46,7 +39,7 @@ const OurCategories = () => {
             title="CAKES"
             count={64}
           />{" "}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

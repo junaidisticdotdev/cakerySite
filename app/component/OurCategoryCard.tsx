@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import { easeOut, motion } from 'framer-motion';
 
 type OurCategoryCardprops = {
   image: string;
@@ -8,7 +9,16 @@ type OurCategoryCardprops = {
 };
 const OurCategoryCard = ({ image, title, count} : OurCategoryCardprops) => {
   return (
-    <div className='w-[280px] group relative p-6 mx-auto flex flex-col items-center text-center rounded-sm transition duration-300 overflow-hidden'>
+    <motion.div className='w-[280px] group relative p-6 mx-auto flex flex-col items-center text-center rounded-sm transition duration-400 overflow-hidden'
+    
+     initial={{ scale:0.9, opacity: 0 }}
+              whileInView={{ scale:1, opacity: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 1.3,
+                ease: "easeOut",
+                delay: 0.4,
+              }}>
       
       {/* image */}
       <div className='w-full h-[320px] flex items-center justify-center overflow-hidden mb-4'>
@@ -23,7 +33,7 @@ const OurCategoryCard = ({ image, title, count} : OurCategoryCardprops) => {
       <div className='w-20 h-[2px] bg-pink-400 my-3'></div>
       {/* number of products */}
       <p className='text-gray-800 italic text-lg'> {count} Products</p>
-    </div>
+    </motion.div>
   )
 }
 
