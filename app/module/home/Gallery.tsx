@@ -17,8 +17,8 @@ const GalleryImage = ({ src, className = "" } : GalleryImageProps) => (
       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
     />
     {/* // overlay */}
-    <div className="absolute inset-0 bg-[#f79dc3]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-      <IoMdSearch className="text-6xl text-white transform scale-50 group-hover:scale-100 transition-transform duration-300" />
+    <div className="absolute inset-0 bg-[#f79dc3]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
+      <p className="text-4xl text-white transform scale-80 group-hover:scale-100 transition-transform duration-400 italic">Best in Town</p>
     </div>
   </div>
 );
@@ -54,7 +54,7 @@ const Gallery = () => {
 
 </div>
 {/* gallery section in grids  */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full h-auto">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full h-auto mx-auto">
         {/* column 1 */}
         <div className="flex flex-col gap-4">
                 <GalleryImage src="/Media/gallery-1.jpg.jpeg" className="h-[300px]" />

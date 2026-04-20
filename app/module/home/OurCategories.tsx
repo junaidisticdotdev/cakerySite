@@ -1,43 +1,55 @@
-import OurCategoryCard from '@/app/component/OurCategoryCard'
-import React from 'react'
+'use client';
+import OurCategoryCard from "@/app/component/OurCategoryCard";
+import React from "react";
+import { motion } from 'framer-motion';
 
 const OurCategories = () => {
   return (
-    <div className='W-full py-16 md:py-20 overflow-hidden bg-white'>
-
+    <div className="W-full py-16 md:py-20 overflow-hidden bg-white">
       {/* Our categories */}
-      <div className='max-w-[1400px] mx-auto px-6 flex flex-col items-center justify-center'>
+      <div className="max-w-[1400px] mx-auto px-6 flex flex-col items-center justify-center">
+        <p className="italic font-medium text-[50px] md:text-[60px] lg:text-[70px] px-4 md:px-0 mb-10">
+          Our Categories
+        </p>
 
-        <p className='italic font-medium text-[40px] md:text-[60px] lg:text-[70px] px-4 md:px-0'>Our Categories</p>
+        {/* grids for cards in our categories  */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full justify-center items-center"
 
-{/* grids for cards in our categories  */}
-<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full justify-center items-center'>
-  {/* at md two cards shown */}
-  
-        <OurCategoryCard
-        image="/Media/cupcake-home.webp"
-        title="CUPCAKES"
-        count={64}/>
-
-        <OurCategoryCard
-        image="/Media/brownie-home.webp"
-        title="BROWNIES"
-        count={64}/> 
-
-        <OurCategoryCard
-        image="/Media/cheesecake-home.webp"
-        title="CHEESECAKES"
-        count={64}/>
-
-        <OurCategoryCard
-        image="/Media/cake-home.webp"
-        title="CAKES"
-        count={64}/>  </div>
-
-</div>
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+            delay: 0.4,
+          }}
+        >
+          {/* at md two cards shown */}
+          <OurCategoryCard
+            image="/Media/cupcake-home.webp"
+            title="CUPCAKES"
+            count={64}
+          />
+          <OurCategoryCard
+            image="/Media/brownie-home.webp"
+            title="BROWNIES"
+            count={64}
+          />
+          <OurCategoryCard
+            image="/Media/cheesecake-home.webp"
+            title="CHEESECAKES"
+            count={64}
+          />
+          <OurCategoryCard
+            image="/Media/cake-home.webp"
+            title="CAKES"
+            count={64}
+          />{" "}
+        </motion.div>
       </div>
-    
-  )
-}
+    </div>
+  );
+};
 
-export default OurCategories
+export default OurCategories;

@@ -29,12 +29,14 @@ const HeroSection: React.FC = () => {
             className='w-full max-w-[300px] sm:max-w-[450px] md:max-w-[650px] lg:max-w-[850px] h-auto object-contain drop-shadow-2xl'
             
             
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3  }}
+
             transition={{
               duration: 1.2,
               ease: "easeOut",
-              delay: 0.2
+              delay: 0.4
             }}
           />
         </div>

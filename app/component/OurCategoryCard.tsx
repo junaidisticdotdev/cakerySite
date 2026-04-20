@@ -6,14 +6,14 @@ type OurCategoryCardprops = {
   title: string;
   count: number;
 };
-const OurCategoryCard = ({ image, title, count}) => {
+const OurCategoryCard = ({ image, title, count} : OurCategoryCardprops) => {
   return (
-    <div className='w-[280px] relative p-6 flex flex-col items-center text-center rounded-sm transition duration-300'>
+    <div className='w-[280px] group relative p-6 mx-auto flex flex-col items-center text-center rounded-sm transition duration-300 overflow-hidden'>
       
       {/* image */}
-      <div className='w-full hover:scale-90 transition-all duration-300 h-[320px] flex items-center justify-center mb-4'>
+      <div className='w-full h-[320px] flex items-center justify-center overflow-hidden mb-4'>
         <img src={image} alt={title} 
-        className='w-full h-full object-cover' />
+        className='w-full h-full object-cover group-hover:scale-110 transition-all  duration-400' />
       </div>
       {/* title */}
       <div className='text-2xl absolute bottom-20 cursor-pointer transition-all duration-300 hover:text-[#f79dc3] font-semibold italic tracking-wide text-gray-800'>
