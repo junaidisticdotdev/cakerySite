@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import  Link from 'next/link';  
 
 const Header = () => { 
     const [isOpen , setIsOpen] = useState(false);
@@ -14,8 +15,8 @@ const Header = () => {
 
     {/* links open on tablet and pc */}
     <ul className='flex whitespace-nowrap items-center justify-center gap-10 tracking-tighter tracking-[0.2em] text-lg font-medium hidden md:flex'>
-        <li className='cursor-pointer text-[#f79dc3]'>HOME</li>
-        <li className='cursor-pointer hover:text-[#f79dc3] duration-300 transition-all'>ABOUT</li>
+        <li className='cursor-pointer text-[#f79dc3]'> <Link href="/">HOME</Link></li>
+        <li className='cursor-pointer hover:text-[#f79dc3] duration-300 transition-all'>  <Link href="/about"> ABOUT </Link> </li>
         <li className='cursor-pointer hover:text-[#f79dc3] duration-300 transition-all'>SERVICES</li>
         <li className='cursor-pointer hover:text-[#f79dc3] duration-300 transition-all'>GALLERY</li>
         <li className='cursor-pointer hover:text-[#f79dc3] duration-300 transition-all'>CONTACT</li>

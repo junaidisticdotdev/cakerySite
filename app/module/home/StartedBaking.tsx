@@ -9,10 +9,20 @@ const StartedBaking = () => {
       {/* main section for how we started baking  */}
       <div className="min-h-screen relative flex flex-col sm:flex-row justify-between sm:px-0 py-0">
         {/* background color div */}
-        <div className="bg-[#fbf6eb] absolute w-full h-[90%] z-0 bottom-0 "></div>
+        <div className="bg-[#fbf6eb] absolute w-full h-[80vh] z-0 bottom-0 "></div>
 
         {/* left side for detailed paragraph */}
-        <div className="w-full sm:w-1/2 z-20">
+        <motion.div className="w-full sm:w-1/2 z-20"
+        
+        initial={{ x:-100, opacity:1}}
+        whileInView={{ x:0, opacity:1}}
+        viewport={{once: false, amount:0.3}}
+        
+        transition={{
+          duration: 1.2,
+          ease: "easeOut",
+          delay: 0.4
+        }}>
           {/* heading */}
           <div className="flex flex-col leading-[1] px-2 sm:px-8 lg:px-10 space-y-2 max-w-lg">
             <p
@@ -45,7 +55,7 @@ text-[40px] sm:text-[60px] lg:text-[60px] whitespace-nowrap"
               Read More
             </button>
           </div>
-        </div>
+        </motion.div>
 
 
         {/* chef image on right */}
@@ -60,7 +70,7 @@ text-[40px] sm:text-[60px] lg:text-[60px] whitespace-nowrap"
             viewport={{once: false, amount: 0.3 }}
 
             transition={{
-              duration:1,
+              duration:1.2,
               ease: "easeOut",
               delay: 0.4
             }}
